@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Care Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: lightpink;
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 300px;
+            position: relative;
+        }
+        
+        .result {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 20px 20px 30px;
+            color: pink;
+        }
+        
+        /* Heart-shaped button */
+        .heart-button {
+            background-color: pink;
+            border: none;
+            width: 50px;
+            height: 50px;
+            background-image: url(https://png.pngtree.com/png-vector/20240628/ourmid/pngtree-glossy-pink-heart-shape-top-down-view-png-image_12742436.png);
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+            position: relative;
+            transition: 0.3s ease-in-out;
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <p class="result" id="output">Нажми на сердечко!</p>
+        <div class="button-container">
+            <button class="heart-button" onclick="generateCare()">❤️</button>
+        </div>
+    </div>
+  
+<script>
+function generateCare() {
+    let randomNumber = Math.floor(Math.random() * 100) + 1;
+    let activity = "";
+
+    switch(randomNumber) {
+        case 1: activity = "Нейрографика"; break;
+        case 2: activity = "Медитация"; break;
+        case 3: activity = "Аромотерапия"; break;
+        case 4: activity = "Телесные практики"; break;
+        case 5: activity = "Контрастный душ"; break;
+        case 6: activity = "Рисование"; break;
+        case 7: activity = "Вкусный чай"; break;
+        case 8: activity = "Десятичасовой сон"; break;
+        case 9: activity = "Носить в руке маленький предмет"; break;
+        case 10: activity = "Нюхать свежую выпечку в кафе"; break;
+        case 11: activity = "Пойти в театр"; break;
+        case 12: activity = "Изучать иностранный язык"; break;
+        case 13: activity = "Обнимать дерево"; break;
+        case 14: activity = "Любоваться человеческими эмоциями"; break;
+        case 15: activity = "Постелить новое постельное белье"; break;
+        case 16: activity = "Посмотреть фильм или мультфильм"; break;
+        case 17: activity = "Зажечь аромасвечи"; break;
+        case 18: activity = "Ловить ароматы природы"; break;
+        case 19: activity = "Купить что-то для радости в магазине рукоделия"; break;
+        case 20: activity = "Слушать музыку"; break;
+        case 21: activity = "Мазать тело кремом"; break;
+        case 22: activity = "Наблюдать за людьми в метро"; break;
+        case 23: activity = "Сделать необычную прическу"; break;
+        case 24: activity = "Сделать необычный макияж"; break;
+        case 25: activity = "Прогулка в парке или лесу"; break;
+        case 26: activity = "Носить в карманах каштаны"; break;
+        case 27: activity = "Заняться спортом"; break;
+        case 28: activity = "Нюхать разные духи в магазине"; break;
+        case 29: activity = "Водить автомобиль"; break;
+        case 30: activity = "Бездельничать"; break;
+        case 31: activity = "Носить яркую одежду"; break;
+        case 32: activity = "Пойти на массаж"; break;
+        case 33: activity = "Послушать новый жанр музыки"; break;
+        case 34: activity = "Пить кофе или чай, наблюдая за городом"; break;
+        case 35: activity = "Наблюдать за животными"; break;
+        case 36: activity = "Делать ничего"; break;
+        case 37: activity = "Играть в кота (валяться на кровати, мурлыкать)"; break;
+        case 38: activity = "Найти цветок сирени с пятью лепестками и съесть его"; break;
+        case 39: activity = "Сварить кофе"; break;
+        case 40: activity = "Танцевать с наушниками и закрытыми глазами"; break;
+        case 41: activity = "Сделать себе подарок"; break;
+        case 42: activity = "Наблюдать за фонтаном"; break;
+        case 43: activity = "Позвонить кому-то и сказать, как ты его ценишь"; break;
+        case 44: activity = "Делать открытки"; break;
+        case 45: activity = "Сделать коллаж (выключив перфекциониста)"; break;
+        case 46: activity = "Лепить из глины"; break;
+        case 47: activity = "Смотреть в окно и любоваться миром"; break;
+        case 48: activity = "Составить карту желаний"; break;
+        case 49: activity = "Приготовить что-то вкусное"; break;
+        case 50: activity = "Кормить птиц"; break;
+        default: activity = "Нажми еще раз!"; break;
+    }
+
+    document.getElementById('output').textContent = activity;
+}
+</script>
+
+</body>
+</html>
